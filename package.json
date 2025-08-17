@@ -1,0 +1,17 @@
+{
+  "name": "ten-point-hare",
+  "version": "1.0.0",
+  "description": "A minimalistic billboard website for Ten Point Hare web development company",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": ["website", "portfolio", "minimalistic", "design"],
+  "author": "Ten Point Hare",
+  "license": "MIT"
+}

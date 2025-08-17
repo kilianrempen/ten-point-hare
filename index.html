@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ten Point Hare - Beautiful, Functional Websites</title>
+    <meta name="description" content="Ten Point Hare creates beautiful, functional websites with intentional design and minimalistic aesthetics.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-['Inter'] overflow-hidden">
+    <div class="dot-background"></div>
+    <main class="min-h-screen flex flex-col items-center justify-center p-8 relative z-10">
+        <!-- Logo Section -->
+        <section class="logo-section mb-12 opacity-0 animate-fade-in">
+            <img src="img/ten-point-hare-logo-1.png" 
+                 alt="Ten Point Hare Logo" 
+                 class="w-64 h-64 md:w-80 md:h-80 object-contain mx-auto mb-8">
+        </section>
+
+        <!-- Company Name -->
+        <section class="company-name mb-8 opacity-0 animate-fade-in-delay-1">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-wider text-center">
+                TEN POINT HARE
+            </h1>
+        </section>
+
+        <!-- Tagline -->
+        <section class="tagline mb-12 opacity-0 animate-fade-in-delay-2">
+            <p class="text-lg md:text-xl lg:text-2xl font-light tracking-wide text-center text-gray-600 max-w-md leading-relaxed">
+                Creating beautiful,<br>functional websites
+            </p>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta opacity-0 animate-fade-in-delay-3">
+            <button class="contact-btn px-8 py-3 border border-gray-300 text-gray-700 font-light tracking-wider hover:bg-gray-900 hover:text-white transition-all duration-500 ease-in-out transform hover:scale-105">
+                GET IN TOUCH
+            </button>
+        </section>
+
+        <!-- Minimal Footer -->
+        <footer class="absolute bottom-8 text-center opacity-0 animate-fade-in-delay-4">
+            <p class="text-sm text-gray-400 tracking-wider">
+                2025 TEN POINT HARE
+            </p>
+        </footer>
+    </main>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-0 invisible transition-all duration-300 ease-in-out flex items-center justify-center z-50">
+        <div class="bg-white p-12 rounded-sm border border-gray-200 transform scale-95 transition-transform duration-300 ease-in-out">
+            <h3 class="text-xl font-light tracking-wider mb-6 text-center">GET IN TOUCH</h3>
+            <div class="space-y-4 text-center">
+                <p class="text-gray-600">hello@tenpointhare.com</p>
+                <button id="close-modal" class="mt-6 px-6 py-2 border border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white transition-all duration-300">
+                    CLOSE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
