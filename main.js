@@ -173,3 +173,15 @@ function createSnowfall() {
         snowfallContainer.appendChild(snowflake);
     }
 }
+
+const container = document.querySelector('.jackalope-container');
+const video = container.querySelector('.jackalope-video');
+
+container.addEventListener('mouseenter', () => {
+    video.currentTime = 0;
+    video.play();
+});
+
+container.addEventListener('mouseleave', () => {
+    video.pause();
+});

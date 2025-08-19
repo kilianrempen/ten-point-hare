@@ -271,3 +271,35 @@ footer:hover p {
         opacity: 0;
     }
 }
+
+
+.jackalope-container {
+    position: relative;
+    display: inline-block;
+    width: 390px; /* adjust to your image size */
+    height: auto;
+}
+
+.jackalope-png,
+.jackalope-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 300px;
+    object-fit: cover;
+    transition: opacity 0.3s ease; /* smooth fade */
+}
+
+.jackalope-video {
+    opacity: 0;
+    pointer-events: none; /* so hover triggers PNG container */
+}
+
+.jackalope-container:hover .jackalope-video {
+    opacity: 1;
+}
+
+.jackalope-container:hover .jackalope-png {
+    opacity: 0;
+}
