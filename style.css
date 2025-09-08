@@ -166,10 +166,10 @@ body {
     transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-.logo-section:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-}
+/*.logo-section:hover img {*/
+/*    filter: grayscale(0%);*/
+/*    transform: scale(1.05);*/
+/*}*/
 
 /* Modal backdrop animation */
 #contact-modal.visible {
@@ -275,9 +275,17 @@ footer:hover p {
 
 .jackalope-container {
     position: relative;
-    display: inline-block;
-    width: 390px; /* adjust to your image size */
-    height: auto;
+    display: block;
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .jackalope-container {
+        width: 390px;
+        height: 320px;
+    }
 }
 
 .jackalope-png,
@@ -285,10 +293,10 @@ footer:hover p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 390px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease; /* smooth fade */
+    transition: opacity 0.4s ease-in-out; /* slower fade-in */
 }
 
 .jackalope-video {
@@ -298,8 +306,21 @@ footer:hover p {
 
 .jackalope-container:hover .jackalope-video {
     opacity: 1;
+    transition: opacity 0.1s ease-in-out; /* slower fade-in */
 }
 
 .jackalope-container:hover .jackalope-png {
     opacity: 0;
+    transition: opacity 0.1s ease-in-out; /* slower fade-in */
+}
+
+.jackalope-video {
+    opacity: 0;
+    pointer-events: none; /* so hover triggers PNG container */
+    transition: opacity 0.5s ease-out; /* faster fade-out */
+}
+
+.jackalope-png {
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* faster fade-out */
 }
